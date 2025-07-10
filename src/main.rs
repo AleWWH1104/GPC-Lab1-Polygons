@@ -8,23 +8,22 @@ use polygon::draw_polygon;
 use polygon::fill_polygon;
 
 fn main(){
-    let width = 400;
-    let height = 400;
+    let width = 500;
+    let height = 300;
     let background_color= Color::BLACK;
     let mut framebuffer = Framebuffer::new(width, height, background_color);
  
     framebuffer.set_background_color(background_color);
     framebuffer.clear();
 
-    let array2 = [
-        Vector2::new(321.0, 335.0),
-        Vector2::new (288.0, 286.0),
-        Vector2::new(339.0, 251.0),
-        Vector2::new(374.0, 302.0),
+    let array3 = [
+        Vector2::new(377.0, 249.0) ,
+        Vector2::new (411.0, 197.0),
+        Vector2::new(436.0, 249.0),
     ];     
 
-    fill_polygon(&mut framebuffer, Color::BLUE, &array2);
-    draw_polygon(&mut framebuffer, Color::WHITE, &array2);
+    fill_polygon(&mut framebuffer, Color::RED, &array3);
+    draw_polygon(&mut framebuffer, Color::WHITE, &array3);
 
     let output_file = "out.bmp";
  
