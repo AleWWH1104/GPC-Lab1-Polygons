@@ -5,6 +5,7 @@ mod polygon;
 use raylib::prelude::*;
 use framebuffer::Framebuffer;
 use polygon::draw_polygon;
+use polygon::fill_polygon;
 
 fn main(){
     let width = 400;
@@ -22,6 +23,7 @@ fn main(){
         Vector2::new(374.0, 302.0),
     ];     
 
+    fill_polygon(&mut framebuffer, Color::BLUE, &array2);
     draw_polygon(&mut framebuffer, Color::WHITE, &array2);
 
     let output_file = "out.bmp";
